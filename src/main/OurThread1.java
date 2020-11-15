@@ -8,6 +8,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class OurThread1 extends Thread{
 
     private String msg;
+    private int n;
 
     public OurThread1() {
     }
@@ -15,10 +16,12 @@ public class OurThread1 extends Thread{
     public OurThread1(String msg) {
         this.msg = msg;
     }
+
+
     @Override
     public void run() {
         try {
-            Thread.sleep(10);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
