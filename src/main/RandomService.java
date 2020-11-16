@@ -15,6 +15,14 @@ public class RandomService {
             threads.add(t);
         }
         threads.add(new OurThread1("_"));
+        for (char ch = 65; ch < 91; ch++) {
+            OurThread1 t = new OurThread1(String.valueOf(ch));
+            threads.add(t);
+        }
+        for (char ch = 97; ch < 122; ch++) {
+            OurThread1 t = new OurThread1(String.valueOf(ch));
+            threads.add(t);
+        }
         for (Thread t : threads) {
             t.start();
         }
